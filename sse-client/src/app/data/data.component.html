@@ -1,0 +1,6 @@
+<div>
+  <h3>Data component {{ index }}</h3>
+  <h4>{{data?.random}}</h4>
+  <button (click)="unsubscribe()" *ngIf="subscribed">Unsubscribe</button>
+  <button (click)="subscribe()" *ngIf="!subscribed">Subscribe</button>
+</div>

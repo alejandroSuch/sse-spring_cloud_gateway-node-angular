@@ -12,7 +12,11 @@ public class RouterConfiguration {
         return builder.routes()
                 .route(
                         r -> r.path("/sse")
-                                .uri("http://localhost:3000")
+                                .uri("http://node:3000")
+                )
+                .route(
+                        r -> r.path("/*")
+                                .uri("http://client:80")
                 )
                 .build();
     }

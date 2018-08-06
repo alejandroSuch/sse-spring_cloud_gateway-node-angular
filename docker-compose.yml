@@ -1,0 +1,13 @@
+version: '3'
+services:
+  edge:
+    build:
+      context: ./edge
+    ports:
+      - "8080:8080"
+  node:
+    build:
+      context: ./sse-node
+  client:
+    build:
+      context: ./sse-client
